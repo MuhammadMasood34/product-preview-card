@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Kanit:ital,wght@1,300&family=Martian+Mono:wght@300&family=Raleway:wght@300&family=Titillium+Web:wght@300&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&family=Raleway:wght@300&family=Titillium+Web:wght@300&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    body {
+      background-color: hsl(30, 38%, 92%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      padding: 23px;
+      position: fixed;
+      bottom: 23px;
+      left: 600px;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      padding: 13px;
+    }
+
+    .text-section {
+      background-color: hsl(0, 0%, 100%);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 300px;
+      height: 450px;
+    }
+
+    .text-secondary {
+      font-size: 14px;
+      color: hsl(228, 12%, 48%);
+      font-family: 'Montserrat', sans-serif;
+      padding: 0px 23px;
+    }
+
+    .text-primary {
+      font-family: 'Fraunces', serif;
+      margin: 0px 123px 0px 23px;
+      color: hsl(212, 21%, 14%);
+    }
+
+    .text-section button {
+      background-color: hsl(157deg 29.09% 24.4%);
+      color: hsl(0, 0%, 100%);
+      height: 40px;
+      width: 230px;
+      border-radius: 10px;
+      border: 2px solid hsl(157deg 29.09% 24.4%);
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      margin: 46px 0px 0px 23px;
+    }
+
+    .prices #latest {
+      font-family: 'Fraunces', serif;
+      margin: 0px 0px 0px 23px;
+      color: hsl(158, 36%, 37%);
+      font-size: 1.7rem;
+    }
+
+    .prices {
+      position: relative;
+      top: 20px;
+    }
+
+    .display-page {
+      display: flex;
+      width: 600px;
+      height: 400px;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    #image-attributes img {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      height: 450px;
+      width: 300px;
+    }
+
+    #mobile-image img {
+      display: none;
+    }
+
+    .mobile-text {
+      display: none;
+    }
+
+    @media (max-width: 375px) {
+      body {
+        background-color: hsl(30, 38%, 92%);
+      }
+
+      #mobile-image img {
+        height: 450px;
+        width: 530px;
+        border-radius: 10px;
+        margin: -25px 0px 0px 23px;
+        display: block;
+      }
+
+      .text-section {
+        display: none;
+      }
+
+      #image-attributes img {
+        display: none;
+      }
+
+      .mobile-text {
+        display: block;
+        position: relative;
+        top: 430px;
+        right: 430px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <article class="display-page">
+    <aside id="image-attributes">
+      <img src="image-product-desktop.jpg" alt="image">
+    </aside>
+    <div id="mobile-image">
+      <img src="image-product-mobile.jpg" alt="mobile-image">
+    </div>
+    <div class="mobile-text">
+      <div class="text-secondary">
+        <h5>P E R F U M E</h5>
+      </div>
+      <div class="text-primary">
+        <h2>Gabrielle Essence Eau De Parfum</h2>
+      </div>
+      <div class="text-secondary">
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+      </div>
+      <div class="prices">
+        <span id="latest">$149.99</span>
+        <span id="old" class="text-secondary">
+          <strike>$169.99</strike></span>
+      </div>
+      <button>Add to Cart</button>
+    </div>
+    <section class="text-section">
+      <div class="text-secondary">
+        <h5>P E R F U M E</h5>
+      </div>
+      <div class="text-primary">
+        <h2>Gabrielle Essence Eau De Parfum</h2>
+      </div>
+      <div class="text-secondary">
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+      </div>
+      <div class="prices">
+        <span id="latest">$149.99</span>
+        <span id="old" class="text-secondary">
+          <strike>$169.99</strike></span>
+      </div>
+      <button>Add to Cart</button>
+    </section>
+  </article>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Muhammad Masood</a>.
+  </footer>
+</body>
+
+</html>
